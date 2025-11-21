@@ -15,11 +15,11 @@ export default function Home() {
             {
                 y: 50,
                 opacity: 0,
-                rotationX: 50,   // کج روی محور X
-                rotationY: 50,   // کج روی محور Y
-                rotationZ: 10,   // کمی چرخش Z
+                rotationX: 50,
+                rotationY: 50,
+                rotationZ: 10,
                 scale: 0.7,
-                z: 100,          // offset روی محور Z برای حس عمق
+                z: 100,
                 transformOrigin: "50% 50%",
             },
             {
@@ -173,9 +173,8 @@ export default function Home() {
             <section className='relative top-[55%] z-10 w-full'>
 
                 {/* sec2 start */}
-                <div id='sec2' className='relative top-50 w-full h-[70vh] bg-black rounded-t-[80%]'>
-                    
-                </div>
+                <div id='sec2' className='relative top-50 w-full h-[70vh] bg-black rounded-t-[80%]'/>
+                
                 <div id='sec2' className='relative top-50 w-full h-screen bg-black'>
 
                 </div>
