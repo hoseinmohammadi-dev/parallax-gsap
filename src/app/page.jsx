@@ -12,7 +12,7 @@ export default function Home() {
         // hero start
         gsap.to(".hero-img", {
             y: -1000,
-            scale:2.3,
+            scale: 2.3,
             ease: "none",
             scrollTrigger: {
                 trigger: ".wrapper",
@@ -23,7 +23,7 @@ export default function Home() {
 
         gsap.to(".hero-img2", {
             y: 1000,
-            scale:2.3,
+            scale: 2.3,
             ease: "none",
             scrollTrigger: {
                 trigger: ".wrapper",
@@ -64,7 +64,7 @@ export default function Home() {
 
         gsap.to(".hero-text4", {
             x: 100,
-            y:200,
+            y: 200,
             ease: "none",
             scrollTrigger: {
                 trigger: ".wrapper",
@@ -112,48 +112,49 @@ export default function Home() {
                 <div className='flex-center font-[ivyOra]'>
                     <div className='absolute left-90 flex-center gap-7'>
                         <img className='hero-img w-[210px]' src="/img/03.jpg " alt="" />
-                        <p className='hero-text relative z-10'>High</p>
+                        <p className='hero-text relative z-10 mix-blend-overlay brightness-125 saturate-150'>High</p>
                     </div>
                 </div>
                 <div className='flex-center font-[ivyOra]'>
                     <div className='absolute left-65 flex-center gap-7'>
-                        <p className='hero-text2'>END</p>
+                        <p className='hero-text2 mix-blend-overlay brightness-125 saturate-150'>END</p>
                         <img className='hero-img w-[210px]' src="/img/02.jpg " alt="" />
                     </div>
                 </div>
                 <div className='flex-center gap-7 text-[200px]!'>
-                    <img className='hero-img2 w-[210px]' src="/img/04.jpg" alt="" />
-                    <p className='hero-text3'>DIGITAL</p>
-                    <img className='hero-img2 w-[210px]' src="/img/05.jpg" alt="" />
+                    <div className='absolute left-40 flex-center gap-7'>
+                        <img className='hero-img2 w-[210px]' src="/img/04.jpg" alt="" />
+                        <p className='hero-text3 mix-blend-overlay brightness-125 saturate-150'>DIGITAL</p>
+                        <img className='hero-img2 w-[210px]' src="/img/05.jpg" alt="" />
+                    </div>
                 </div>
                 <div className='flex-center gap-7 text-[200px]!'>
-                    <p className='hero-text4'>EXPERIENCES</p>
-                    <img className='hero-text4 w-[100px] text-black invert-[0] brightness-0' src="/img/01.svg" alt="" />
+                    <div className='absolute left-24 flex-center gap-7'>
+                        <p className='hero-text4 mix-blend-overlay brightness-125 saturate-150'>EXPERIENCES</p>
+                        <img className='hero-text4 w-[100px] text-black invert-[0] brightness-0' src="/img/01.svg" alt="" />
+                    </div>
                 </div>
             </section>
             {/* hero end */}
 
 
-            <section className='relative top-[60%] z-10 w-full'>
+            {/* sec1 start */}
+            <div id='sec1' className='absolute -bottom-[120%] left-1/2 -translate-x-1/2 z-20 w-[70%] h-[80vh] rounded-full overflow-hidden'>
+                <video className='w-full h-full object-cover' src="/video/01.mp4" autoPlay loop playsInline muted />
+                <div className="absolute z-20 inset-0 pointer-events-none rounded-full shadow-[inset_0_0_60px_#00000085]"></div>
+            </div>
+            {/* sec1 end */}
 
-                {/* sec1 start */}
-                <div id='sec1' className='absolute bottom-[105%] left-1/2 -translate-x-1/2 w-[70%] h-[80vh] rounded-full overflow-hidden'>
-                    <video className='w-full h-full object-cover' src="/video/01.mp4" autoPlay loop playsInline muted />
-                    <div className="absolute z-20 inset-0 pointer-events-none rounded-full shadow-[inset_0_0_60px_#00000085]"></div>
-                </div>
-                {/* sec1 end */}
+            <section className='relative top-[55%] z-10 w-full'>
 
                 {/* sec2 start */}
                 <div id='sec2' className='relative top-50 w-full h-[70vh] bg-black rounded-t-[80%]'>
 
                 </div>
-                <div id='sec2' className='relative top-50 w-full h-[70vh] bg-black'>
+                <div id='sec2' className='relative top-50 w-full h-screen bg-black'>
 
                 </div>
                 {/* sec2 end */}
-
-
-
             </section>
 
         </div>
