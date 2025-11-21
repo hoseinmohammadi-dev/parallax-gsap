@@ -10,6 +10,33 @@ export default function Home() {
     useEffect(() => {
 
         // hero start
+        gsap.fromTo(
+            ".hero-text, .hero-text2, .hero-text3, .hero-text4",
+            {
+                y: 50,
+                opacity: 0,
+                rotationX: 50,   // کج روی محور X
+                rotationY: 50,   // کج روی محور Y
+                rotationZ: 10,   // کمی چرخش Z
+                scale: 0.7,
+                z: 100,          // offset روی محور Z برای حس عمق
+                transformOrigin: "50% 50%",
+            },
+            {
+                y: 0,
+                opacity: 1,
+                rotationX: 0,
+                rotationY: 0,
+                rotationZ: 0,
+                scale: 1,
+                z: 0,
+                duration: 1.2,
+                stagger: 0.3,
+                ease: "power3.out",
+            }
+        );
+
+
         gsap.to(".hero-img", {
             y: -1000,
             scale: 2.3,
@@ -37,7 +64,7 @@ export default function Home() {
             ease: "none",
             scrollTrigger: {
                 trigger: ".wrapper",
-                start: "top top",
+                start: "top -50%",
                 scrub: true,
             }
         });
@@ -47,7 +74,7 @@ export default function Home() {
             ease: "none",
             scrollTrigger: {
                 trigger: ".wrapper",
-                start: "top top",
+                start: "top -50%",
                 scrub: true,
             }
         });
@@ -57,18 +84,17 @@ export default function Home() {
             ease: "none",
             scrollTrigger: {
                 trigger: ".wrapper",
-                start: "top top",
+                start: "top -50%",
                 scrub: true,
             }
         });
 
         gsap.to(".hero-text4", {
             x: 100,
-            y: 200,
             ease: "none",
             scrollTrigger: {
                 trigger: ".wrapper",
-                start: "top top",
+                start: "top -50%",
                 scrub: true,
             }
         });
@@ -99,9 +125,8 @@ export default function Home() {
         });
         // sec2 end
 
-
-
     }, []);
+
 
     return (
         <div className='h-[400vh]'>
@@ -131,7 +156,7 @@ export default function Home() {
                 <div className='flex-center gap-7 text-[200px]!'>
                     <div className='absolute left-24 flex-center gap-7'>
                         <p className='hero-text4 mix-blend-overlay brightness-125 saturate-150'>EXPERIENCES</p>
-                        <img className='hero-text4 w-[100px] text-black invert-[0] brightness-0' src="/img/01.svg" alt="" />
+                        <img className='hero-img w-[100px] text-black invert-[0] brightness-0' src="/img/01.svg" alt="" />
                     </div>
                 </div>
             </section>
@@ -149,7 +174,7 @@ export default function Home() {
 
                 {/* sec2 start */}
                 <div id='sec2' className='relative top-50 w-full h-[70vh] bg-black rounded-t-[80%]'>
-
+                    
                 </div>
                 <div id='sec2' className='relative top-50 w-full h-screen bg-black'>
 
