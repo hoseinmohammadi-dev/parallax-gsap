@@ -4,7 +4,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <main className="mx-auto container">
+        <main className="w-full bg-gray-200">
         {children}
         </main>
       </body>
