@@ -531,11 +531,11 @@ export default function Home() {
                     <p>about-</p>
                 </div>
 
-                    <div className='flex items-center gap-8  text-[50px] ml-10'>
-                        <a href='https://www.hoseinmdev.ir' className='cursor-pointer hover:text-green-950 transition-all'>HOSEINMDEV.IR</a>
-                        <p className='text-[300px]! font-[ivyOra]'>&</p>
-                        <p>FRONTEND DEVELOPER</p>
-                    </div>
+                <div className='absolute bottom-0 flex items-center gap-8  text-[50px] ml-10'>
+                    <a href='https://www.hoseinmdev.ir' className='cursor-pointer hover:text-green-950 transition-all'>HOSEINMDEV.IR</a>
+                    <p className='text-[300px]! font-[ivyOra]'>&</p>
+                    <p>FRONTEND DEVELOPER</p>
+                </div>
 
             </section>
             {/* footer end */}
