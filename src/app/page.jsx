@@ -263,7 +263,7 @@ export default function Home() {
                 }
             });
 
-        
+
             ScrollTrigger.create({
                 trigger: slide,
                 start: "top top",
@@ -318,7 +318,7 @@ export default function Home() {
 
         gsap.to(".sec3Text", {
             scale: 1.5,
-            color:"#f08003",
+            color: "#f08003",
             scrollTrigger: {
                 trigger: ".sec3Text",
                 duration: 1.2,
@@ -331,7 +331,7 @@ export default function Home() {
 
         gsap.to(".sec3Text2", {
             scale: 1.5,
-            color:"#8596ad",
+            color: "#8596ad",
             scrollTrigger: {
                 trigger: ".sec3Text",
                 duration: 1.2,
@@ -343,6 +343,28 @@ export default function Home() {
         })
 
         //sec3 end
+
+        //sec4 start
+        gsap.to(".sec4about", {
+            x: -1000,
+            scrollTrigger: {
+                trigger: ".sec4about",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 4,
+            }
+        });
+
+        gsap.to(".sec4about2", {
+            x: 300,
+            scrollTrigger: {
+                trigger: ".sec4about2",
+                start: "top bottom",
+                end: "bottom top",
+                scrub: 4,
+            }
+        });
+        //sec4 end
     }, []);
 
 
@@ -463,26 +485,61 @@ export default function Home() {
             {/* sec3 start */}
             <section className='wraperAnimFix w-full bg-black relative -bottom-[150vh] z-30'>
                 <div className="sec3-slide w-full h-screen overflow-hidden flex-center">
-                    <p className='animText absolute z-50 text-white text-9xl font-[ivyOra]'>METRICA</p>
+                    <p className='animText absolute z-40 text-white text-9xl font-[ivyOra]'>METRICA</p>
                     <img className='sec3Img w-full h-full object-cover' src="/img/08.jpg" alt="Slide 1" />
                 </div>
                 <div className="sec3-slide w-full h-screen overflow-hidden flex-center">
-                    <p className='sec3Text absolute z-50 text-white text-9xl font-[ivyOra]'>STELAR</p>
+                    <p className='sec3Text absolute z-40 text-white text-9xl font-[ivyOra]'>STELAR</p>
                     <img className='sec3Img2 w-full h-full object-cover' src="/img/09.jpg" alt="Slide 2" />
                 </div>
                 <div className="sec3-slide w-full h-screen overflow-hidden flex-center">
-                    <p className='sec3Text2 absolute z-50 text-white text-9xl font-[ivyOra]'>LOVEN MORCEL</p>
+                    <p className='sec3Text2 absolute z-40 text-white text-9xl font-[ivyOra]'>LOVEN MORCEL</p>
                     <img className='sec3Img3 w-full h-full object-cover' src="/img/10.jpg" alt="Slide 3" />
                 </div>
                 <div className="sec3-slide w-full h-screen overflow-hidden flex-center">
-                    <p className='absolute z-50 text-white text-9xl font-[ivyOra]'>PRIESTESS</p>
+                    <p className='absolute z-40 text-white text-9xl font-[ivyOra]'>PRIESTESS</p>
                     <img className='sec3Img4 w-full h-full object-cover' src="/img/11.jpg" alt="Slide 4" />
                 </div>
             </section>
             {/* sec3 end */}
 
-            
-            
+
+            {/* footer start */}
+            <section className=' relative top-[15%] z-50 w-full h-[130vh] bg-gray-200 text-black rounded-t-[20%] overflow-hidden'>
+                <div className='sec4about flex gap-15 text-8xl mt-80 uppercase'>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                </div>
+                <div className='sec4about2 flex gap-15 *:font-[ivyOra] text-8xl mt-5 uppercase -translate-x-full'>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                    <p>about-</p>
+                </div>
+
+                    <div className='flex items-center gap-8  text-[50px] ml-10'>
+                        <a href='https://www.hoseinmdev.ir' className='cursor-pointer hover:text-green-950 transition-all'>HOSEINMDEV.IR</a>
+                        <p className='text-[300px]! font-[ivyOra]'>&</p>
+                        <p>FRONTEND DEVELOPER</p>
+                    </div>
+
+            </section>
+            {/* footer end */}
+
         </div>
     );
 }
