@@ -9,6 +9,60 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
     useEffect(() => {
 
+        // all text animation start
+        gsap.utils.toArray(".animText").forEach((el) => {
+            gsap.fromTo(el,
+                {
+                    y: 50,
+                    opacity: 0,
+                    rotationX: 50,
+                    rotationY: 50,
+                    rotationZ: 10,
+                    scale: 0.7,
+                    z: 100,
+                    transformOrigin: "50% 50%",
+                },
+                {
+                    y: 0,
+                    opacity: 1,
+                    rotationX: 0,
+                    rotationY: 0,
+                    rotationZ: 0,
+                    scale: 1,
+                    z: 0,
+                    duration: 1,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 80%",
+                        toggleActions: "play none none reverse",
+                    },
+                }
+            );
+        });
+
+        gsap.fromTo(".animText2",
+            {
+                opacity: 0,
+                y: 50,
+            },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.2,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: ".animText2",
+                    start: "top 80%",
+                    toggleActions: "play none none reverse",
+                }
+            }
+        );
+
+        // all text animation end
+
+
+
         // hero start
         gsap.fromTo(
             ".hero-text, .hero-text2, .hero-text3, .hero-text4",
@@ -44,7 +98,7 @@ export default function Home() {
             scrollTrigger: {
                 trigger: ".wrapper",
                 start: "top top",
-                scrub: true,
+                scrub: 2,
             }
         });
 
@@ -55,7 +109,7 @@ export default function Home() {
             scrollTrigger: {
                 trigger: ".wrapper",
                 start: "top top",
-                scrub: true,
+                scrub: 2,
             }
         });
 
@@ -120,10 +174,72 @@ export default function Home() {
             scrollTrigger: {
                 trigger: "#sec2",
                 start: "top 120%",
-                scrub: true,
+                scrub: 1.5,
             },
         });
+
+        gsap.to(".sec2Text1", {
+            x: -100,
+            scrollTrigger: {
+                trigger: ".sec2Text1",
+                start: "top 20%",
+                end: "bottom top",
+                scrub: 1.5,
+            }
+        });
+
+        gsap.to(".sec2Text2", {
+            x: 75,
+            scrollTrigger: {
+                trigger: ".sec2Text2",
+                start: "top 35%",
+                end: "bottom top",
+                scrub: 1.5,
+            }
+        });
+
+        gsap.to(".sec2Text3", {
+            x: -50,
+            scrollTrigger: {
+                trigger: ".sec2Text3",
+                start: "top 120%",
+                end: "bottom top",
+                scrub: 1.5,
+            }
+        });
+
+        gsap.to(".sec2Shape", {
+            x: -1000,
+            scrollTrigger: {
+                trigger: ".sec2Text3",
+                start: "top 50%",
+                end: "bottom top",
+                scrub: 4,
+            }
+        });
+
+        gsap.to(".sec2Text4", {
+            x: 200,
+            scrollTrigger: {
+                trigger: ".sec2Text3",
+                start: "top 80%",
+                scrub: 1.5,
+            }
+        });
+
+        gsap.to(".sec2Text5", {
+            x: -60,
+            scrollTrigger: {
+                trigger: ".sec2Text4",
+                start: "top top",
+                scrub: 1.5,
+            }
+        });
+
+
         // sec2 end
+
+
 
     }, []);
 
@@ -132,7 +248,7 @@ export default function Home() {
         <div className='h-[400vh]'>
 
             {/* hero start */}
-            <section className='fixed top-0 left-0 w-full h-screen *:w-full *:h-1/4 *:text-[190px] *:text-black'>
+            <section className='fixed top-0 left-0 w-full h-screen *:w-full *:h-1/4 *:text-[190px] *:text-black leading-none'>
 
                 <div className='flex-center font-[ivyOra]'>
                     <div className='absolute left-90 flex-center gap-7'>
@@ -164,22 +280,81 @@ export default function Home() {
 
 
             {/* sec1 start */}
-            <div id='sec1' className='absolute -bottom-[120%] left-1/2 -translate-x-1/2 z-20 w-[70%] h-[80vh] rounded-full overflow-hidden'>
+            <section id='sec1' className='absolute -bottom-[120%] left-1/2 -translate-x-1/2 z-20 w-[70%] h-[80vh] rounded-full overflow-hidden'>
                 <video className='w-full h-full object-cover' src="/video/01.mp4" autoPlay loop playsInline muted />
                 <div className="absolute z-20 inset-0 pointer-events-none rounded-full shadow-[inset_0_0_60px_#00000085]"></div>
-            </div>
+            </section>
             {/* sec1 end */}
 
+            {/* sec2 start */}
             <section className='relative top-[55%] z-10 w-full'>
 
-                {/* sec2 start */}
-                <div id='sec2' className='relative top-50 w-full h-[70vh] bg-black rounded-t-[80%]'/>
-                
-                <div id='sec2' className='relative top-50 w-full h-screen bg-black'>
+                <div id='sec2' className='relative top-50 w-full h-[60vh] bg-black rounded-t-[80%]' />
 
-                </div>
-                {/* sec2 end */}
+                <section className='relative top-50 w-full bg-black text-white overflow-hidden leading-none'>
+                    {/* part1 start */}
+                    <div className='*:relative *:text-[200px] uppercase mb-9'>
+                        <p className='animText sec2Text1 left-50 font-[ivyOra]'>We’ll</p>
+                        <p className='animText sec2Text2 left-120 font-[ivyOra]'>help you</p>
+                        <p className='animText sec2Text3 left-20 '>Stand out</p>
+                    </div>
+                    {/* part1 end */}
+
+
+                    {/* part2 start */}
+                    <div className='sec2Shape h-[200px] flex gap-2.5 *:w-[195px] *:h-[195px] *:bg-white/10 *:rounded-[100%] *:shrink-0'>
+                        <div></div>
+                        <div></div>
+                        <div className='w-[280px]! bg-white/90! rounded-[50%]!'></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    {/* part2 end */}
+
+
+
+                    {/* part3 start */}
+                    <div className='*:relative *:text-[160px] uppercase'>
+                        <p className='animText sec2Text4 left-40 font-[ivyOra]'>& make all</p>
+                        <p className='animText left-15'>your dreams</p>
+                        <div className='flex items-start gap-2 animText sec2Text5  left-130'>
+                            <p className=' font-[ivyOra]'>Stand out</p>
+                            <img className='w-[55px] mt-6' src="/img/07.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <div className='flex gap-2.5 items-start ml-20 my-20'>
+                        <img className='w-[15px]' src="/img/07.svg" alt="" />
+                        <p>As long as your dreams revolve around <br /> something like; being the proud owner <br /> of a spectacular website.</p>
+                    </div>
+                    {/* part3 end */}
+
+
+                    {/* part4 start */}
+                    <p className='animText2 text-[40px] relative -right-170'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Jomor Design is a design practice <br /> focused on digital experiences. With every <br /> single one of our clients, we bring forth a <br /> deep passion for creative problem solving <br /> — which is what we deliver in the form of <br /> custom and memorable experiences.</p>
+                    {/* part4 end */}
+
+
+
+                    {/* part4 end */}
+                    <div className='*:ml-15 *:text-[180px] uppercase mt-50 mb-5'>
+                        <p className='animText font-[ivyOra]'>featured</p>
+                        <p className='animText'>work</p>
+                    </div>
+                    {/* part4 end */}
+                </section>
             </section>
+            {/* sec2 end */}
 
         </div>
     );
