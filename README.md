@@ -1,23 +1,20 @@
 # 🌀 Parallax Project
 
 I built this parallax scrolling website using Next.js, React, and GSAP ScrollTrigger.
-It provides smooth animations, depth effects, and a fully responsive modern layout.
+It provides smooth animations, depth effects.
 
 ---
 
 ## 🖼️ Project Screenshots
 
-<div class="flex width="100%">
-   <img width="20%" height="772" alt="Image" src="https://github.com/user-attachments/assets/9468ac9d-0f34-43ea-b862-bfab992e6bc5" />
-   <img width="75%" height="909" alt="Image" src="https://github.com/user-attachments/assets/fecaed04-49a5-47f5-bf9e-afa838672f87" />
-</div>
+<img width="1899" height="866" alt="Image" src="https://github.com/user-attachments/assets/8ffe3432-954c-4857-bdb8-87dc3b4e7f7c" />
 
 ---
 
 ## 🌐 Demo
 
 You can check out the live demo here:  
-👉 [Live Demo (VPN)](https://admin-panel-ashen-chi.vercel.app/)
+👉 [Live Demo](https://parallax-gsap-sepia.vercel.app/)
 
 ---
 
