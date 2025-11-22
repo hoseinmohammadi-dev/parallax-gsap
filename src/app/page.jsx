@@ -289,7 +289,7 @@ export default function Home() {
             scrollTrigger: {
                 trigger: ".sec3Img2",
                 duration: 2,
-                start: "80% top",
+                start: "top top",
                 end: "bottom top",
                 scrub: 2,
             }
@@ -299,7 +299,7 @@ export default function Home() {
             scrollTrigger: {
                 trigger: ".sec3Img3",
                 duration: 2,
-                start: "80% top",
+                start: "top top",
                 end: "bottom top",
                 scrub: 2,
             }
@@ -309,7 +309,7 @@ export default function Home() {
             scrollTrigger: {
                 trigger: ".sec3Img4",
                 duration: 2,
-                start: "80% top",
+                start: "top top",
                 end: "bottom top",
                 scrub: 2,
             }
@@ -322,7 +322,7 @@ export default function Home() {
             scrollTrigger: {
                 trigger: ".sec3Text",
                 duration: 1.2,
-                start: "80% top",
+                start: "top top",
                 end: "bottom top",
                 toggleActions: "play none none reverse",
                 scrub: 5,
@@ -335,7 +335,7 @@ export default function Home() {
             scrollTrigger: {
                 trigger: ".sec3Text",
                 duration: 1.2,
-                start: "80% top",
+                start: "bottom top",
                 end: "bottom top",
                 toggleActions: "play none none reverse",
                 scrub: 5,
@@ -481,7 +481,7 @@ export default function Home() {
             </section>
             {/* sec3 end */}
 
-
+            
             
         </div>
     );
