@@ -241,108 +241,20 @@ export default function Home() {
         const slides = gsap.utils.toArray(".sec3-slide");
 
         slides.forEach((slide, i) => {
-            const overlay = document.createElement("div");
-            overlay.style.position = "absolute";
-            overlay.style.top = "0";
-            overlay.style.left = "0";
-            overlay.style.width = "100%";
-            overlay.style.height = "100%";
-            overlay.style.backgroundColor = "rgba(0,0,0,0.5)";
-            overlay.style.opacity = "0";
-            overlay.style.pointerEvents = "none";
-            slide.appendChild(overlay);
-
-
-            gsap.to(overlay, {
-                opacity: 1,
-                scrollTrigger: {
-                    trigger: slide,
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true,
-                }
-            });
-
-        
             ScrollTrigger.create({
                 trigger: slide,
                 start: "top top",
-                end: "100%",
+                end: () => `+=${window.innerHeight}`,
                 pin: true,
                 pinSpacing: true,
                 scrub: 2,
             });
         });
 
-        gsap.to(".sec3Img", {
-            scale: 1.1,
-            scrollTrigger: {
-                trigger: ".sec3Img",
-                duration: 2,
-                start: "top top",
-                end: "bottom top",
-                scrub: 2,
-            }
-        })
-        gsap.to(".sec3Img2", {
-            scale: 1.1,
-            scrollTrigger: {
-                trigger: ".sec3Img2",
-                duration: 2,
-                start: "80% top",
-                end: "bottom top",
-                scrub: 2,
-            }
-        })
-        gsap.to(".sec3Img3", {
-            scale: 1.1,
-            scrollTrigger: {
-                trigger: ".sec3Img3",
-                duration: 2,
-                start: "80% top",
-                end: "bottom top",
-                scrub: 2,
-            }
-        })
-        gsap.to(".sec3Img4", {
-            scale: 1.1,
-            scrollTrigger: {
-                trigger: ".sec3Img4",
-                duration: 2,
-                start: "80% top",
-                end: "bottom top",
-                scrub: 2,
-            }
-        })
-
-
-        gsap.to(".sec3Text", {
-            scale: 1.5,
-            color:"#f08003",
-            scrollTrigger: {
-                trigger: ".sec3Text",
-                duration: 1.2,
-                start: "80% top",
-                end: "bottom top",
-                toggleActions: "play none none reverse",
-                scrub: 5,
-            }
-        })
-
-        gsap.to(".sec3Text2", {
-            scale: 1.5,
-            color:"#8596ad",
-            scrollTrigger: {
-                trigger: ".sec3Text",
-                duration: 1.2,
-                start: "80% top",
-                end: "bottom top",
-                toggleActions: "play none none reverse",
-                scrub: 5,
-            }
-        })
 
         //sec3 end
+
+
     }, []);
 
 
@@ -461,28 +373,16 @@ export default function Home() {
 
 
             {/* sec3 start */}
-            <section className='wraperAnimFix w-full bg-black relative -bottom-[150vh] z-30'>
-                <div className="sec3-slide w-full h-screen overflow-hidden flex-center">
-                    <p className='animText absolute z-50 text-white text-9xl font-[ivyOra]'>METRICA</p>
-                    <img className='sec3Img w-full h-full object-cover' src="/img/08.jpg" alt="Slide 1" />
-                </div>
-                <div className="sec3-slide w-full h-screen overflow-hidden flex-center">
-                    <p className='sec3Text absolute z-50 text-white text-9xl font-[ivyOra]'>STELAR</p>
-                    <img className='sec3Img2 w-full h-full object-cover' src="/img/09.jpg" alt="Slide 2" />
-                </div>
-                <div className="sec3-slide w-full h-screen overflow-hidden flex-center">
-                    <p className='sec3Text2 absolute z-50 text-white text-9xl font-[ivyOra]'>LOVEN MORCEL</p>
-                    <img className='sec3Img3 w-full h-full object-cover' src="/img/10.jpg" alt="Slide 3" />
-                </div>
-                <div className="sec3-slide w-full h-screen overflow-hidden flex-center">
-                    <p className='absolute z-50 text-white text-9xl font-[ivyOra]'>PRIESTESS</p>
-                    <img className='sec3Img4 w-full h-full object-cover' src="/img/11.jpg" alt="Slide 4" />
-                </div>
+            <section className='wraperAnimFix w-full h-[300vh] bg-blue-900 relative -bottom-[150vh] z-30'>
+                <div className="sec3-slide w-full h-screen bg-red-600 flex-center text-8xl">1</div>
+                <div className="sec3-slide w-full h-screen bg-yellow-500 flex-center text-8xl">2</div>
+                <div className="sec3-slide w-full h-screen bg-green-700 flex-center text-8xl">3</div>
             </section>
+
+
+
             {/* sec3 end */}
 
-
-            
         </div>
     );
 }
